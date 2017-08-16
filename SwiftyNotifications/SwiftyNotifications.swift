@@ -147,7 +147,7 @@ public class SwiftyNotifications: UIView {
         }
     }
 
-    public func dismiss() {
+    @objc public func dismiss() {
         self.delegate?.willDismissNotification?(notification: self)
         if self.dismissTimer != nil {
             self.dismissTimer!.invalidate()
@@ -345,7 +345,7 @@ public class SwiftyNotifications: UIView {
         }
     }
 
-    internal func handleTap() {
+    @objc internal func handleTap() {
         touchHandler?()
     }
 
